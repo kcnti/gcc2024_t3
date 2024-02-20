@@ -21,10 +21,6 @@ def collect_fb_profile(username):
 def collect_insta_profile(username):
     L = Instaloader()
     profile = Profile.from_username(L.context, username)
-    UserName = profile.full_name 
-    posts = profile.mediacount
-    Follower = profile.followers
-    Follow = profile.followees
     return profile
 
 username = st.text_input("username")
